@@ -1,0 +1,22 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    
+  <f:entry title="${%issuePattern}" field="issuePattern">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="${%statusForTransition}" field="statusForTransition">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="${%assignForAction}" field="assignForAction">
+    <f:textbox />
+  </f:entry>
+  
+   <f:entry title="${%numOfPreBuild}" field="numOfPreBuild">
+    <f:number />
+  </f:entry>
+  
+  <f:entry title="${%comments}" field="comments">
+    <f:textbox />
+  </f:entry>
+    
+    
+</j:jelly>
