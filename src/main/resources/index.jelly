@@ -2,5 +2,5 @@
   This view is used to render the installed plugins page.
 -->
 <div>
-  This plugin is to append sonata build information to Jira Issue(s).
+  This plugin is to append sonata build information to Jira Issue(s). Requires Core 1.500 and above.
 </div>
