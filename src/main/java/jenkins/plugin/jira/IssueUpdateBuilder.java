@@ -11,8 +11,7 @@ import hudson.scm.ChangeLogSet;
 import hudson.scm.ChangeLogSet.Entry;
 import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.BuildStepMonitor;
-import hudson.tasks.Notifier;
-import hudson.tasks.Publisher;
+import hudson.tasks.Builder;
 import integration.services.jira.JiraSoapService;
 import integration.services.jira.RemoteComment;
 import integration.services.jira.RemoteFieldValue;
@@ -21,9 +20,7 @@ import integration.services.jira.RemoteNamedObject;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,7 +40,7 @@ import org.kohsuke.stapler.StaplerRequest;
 
 import common.SOAPSession;
 
-public class IssueUpdateBuilder extends Notifier {
+public class IssueUpdateBuilder extends Builder{
 
 	private static final Logger LOGGER = Logger.getLogger(IssueUpdateBuilder.class.getName());
 
@@ -181,7 +178,7 @@ public class IssueUpdateBuilder extends Notifier {
 	 }
 
 	 @Extension
-	 public static final class DescriptorImpl extends BuildStepDescriptor<Publisher> {
+	 public static final class DescriptorImpl extends BuildStepDescriptor<Builder> {
 
 		 private String issuePattern;
 		 private String comments;
